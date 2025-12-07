@@ -1173,8 +1173,7 @@ footer {
     overflow: visible;
     position: relative;
     padding-bottom: 100px;
-    &::after {
-        content: "";
+    &__bg-img {
         position: absolute;
         bottom: 0px;
         left: 0;
@@ -1257,8 +1256,8 @@ footer {
 @media (max-width: 1024px) {
     .footer {
         padding-bottom: 0;
-        &::after {
-            bottom: 100px;
+        &__bg-img {
+            // height: auto;
         }
         .bg {
             padding: 40px 20px 20px 20px;
@@ -1300,8 +1299,11 @@ footer {
 }
 @media (max-width: 767px) {
     .footer {
-        &::after {
-            bottom: 200px;
+        &__bg-img {
+            display: none;
+        }
+        .bg {
+            border-radius: 20px 20px 0 0;
         }
         &__item-text {
             max-width: 100%;

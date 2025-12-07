@@ -1174,8 +1174,7 @@ footer {
   position: relative;
   padding-bottom: 100px;
 }
-.footer::after {
-  content: "";
+.footer__bg-img {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -1256,9 +1255,6 @@ footer {
   .footer {
     padding-bottom: 0;
   }
-  .footer::after {
-    bottom: 100px;
-  }
   .footer .bg {
     padding: 40px 20px 20px 20px;
   }
@@ -1296,8 +1292,11 @@ footer {
   }
 }
 @media (max-width: 767px) {
-  .footer::after {
-    bottom: 200px;
+  .footer__bg-img {
+    display: none;
+  }
+  .footer .bg {
+    border-radius: 20px 20px 0 0;
   }
   .footer__item-text {
     max-width: 100%;
